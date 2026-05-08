@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Company Infinity | Internet de Alta Velocidade</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --royal-deep: #060b1f;
+            --royal-navy: #0a1628;
+            --royal-blue: #0f1f3d;
+            --royal-electric: #0ea5e9;
+            --royal-cyan: #00d4ff;
+            --royal-purple: #7c3aed;
+            --royal-violet: #a855f7;
+            --royal-gold: #f59e0b;
+            --royal-gradient-1: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 50%, #a855f7 100%);
+            --royal-gradient-2: linear-gradient(135deg, #060b1f 0%, #0a1628 40%, #0f1f3d 100%);
+            --royal-gradient-3: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 30%, #7c3aed 100%);
+            --royal-glass: rgba(255, 255, 255, 0.04);
+            --royal-glass-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --shadow-glow: 0 0 40px rgba(14, 165, 233, 0.15), 0 0 80px rgba(124, 58, 237, 0.08);
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 255, 255, 0.04);
+            --radius-xl: 20px;
+            --radius-2xl: 28px;
+            --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--royal-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ============ SCROLLBAR ============ */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--royal-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--royal-purple);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--royal-violet);
+        }
+
+        /* ============ NAVBAR ============ */
+        .navbar {
+            background: rgba(6, 11, 31, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--royal-glass-border);
+            padding: 14px 0;
+            transition: var(--transition-smooth);
+            z-index: 1050;
+        }
+        .navbar.scrolled {
+            background: rgba(6, 11, 31, 0.92);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+        .navbar-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            background: var(--royal-gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar-brand .brand-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--royal-gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            -webkit-text-fill-color: #fff;
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+        }
+        .navbar-nav .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin: 0 6px;
+            padding: 8px 16px !important;
+            border-radius: 30px;
+            transition: var(--transition-smooth);
+            position: relative;
+            font-size: 0.95rem;
+        }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .navbar-nav .nav-link.btn-nav {
+            background: var(--royal-gradient-1);
+            color: #fff !important;
+            padding: 10px 22px !important;
+            font-weight: 600;
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.3);
+            border-radius: 30px;
+        }
+        .navbar-nav .nav-link.btn-nav:hover {
+            box-shadow: 0 0 40px rgba(124, 58, 237, 0.55);
+            transform: translateY(-2px);
+        }
+        .navbar-toggler {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 10px;
+            border-radius: 10px;
+        }
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
+            outline: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* ============ HERO ============ */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--royal-gradient-2);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            pointer-events: none;
+            animation: floatOrb 12s ease-in-out infinite;
+        }
+        .hero-bg-orb.orb-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--royal-purple);
+            top: -15%;
+            right: -10%;
+            animation-delay: 0s;
+        }
+        .hero-bg-orb.orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--royal-electric);
+            bottom: -20%;
+            left: -8%;
+            animation-delay: -5s;
+        }
+        .hero-bg-orb.orb-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--royal-cyan);
+            top: 40%;
+            left: 35%;
+            animation-delay: -9s;
+            opacity: 0.25;
+        }
+        @keyframes floatOrb {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(40px, -30px) scale(1.08);
+            }
+            50% {
+                transform: translate(-20px, 25px) scale(0.94);
+            }
+            75% {
+                transform: translate(-35px, -15px) scale(1.05);
+            }
+        }
+        .hero-grid-lines {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--royal-cyan);
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease;
+        }
+        .hero-badge i {
+            margin-right: 6px;
+            color: var(--royal-gold);
+        }
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .hero-title .highlight {
+            background: var(--royal-gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #fff;
+            line-height: 1;
+        }
+        .hero-stat .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        .hero-visual {
+            position: relative;
+            z-index: 2;
+            animation: fadeInRight 1s ease 0.3s both;
+        }
+        .hero-graphic-card {
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            border-radius: var(--radius-2xl);
+            padding: 30px 24px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-glow);
+            position: relative;
+        }
+        .speed-display {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 5rem;
+            line-height: 1;
+            background: var(--royal-gradient-3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+        .speed-unit {
+            font-size: 1.5rem;
+            -webkit-text-fill-color: var(--text-secondary);
+        }
+        .pulse-dot {
+            width: 12px;
+            height: 12px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 12px #22c55e;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 0 18px rgba(34, 197, 94, 0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .btn-hero {
+            background: var(--royal-gradient-1);
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+            box-shadow: 0 0 35px rgba(124, 58, 237, 0.35);
+            transition: var(--transition-smooth);
+            animation: fadeInUp 0.8s ease 0.35s both;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-hero:hover {
+            box-shadow: 0 0 55px rgba(124, 58, 237, 0.55);
+            transform: translateY(-3px);
+            color: #fff;
+        }
+        .btn-hero-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            animation: fadeInUp 0.8s ease 0.4s both;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-hero-outline:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+        }
+
+        /* ============ SECTION STYLES ============ */
+        .section-padding {
+            padding: 100px 0;
+        }
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--royal-cyan);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.6rem, 3vw, 2.5rem);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+        .section-desc {
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-size: 1.05rem;
+        }
+
+        /* ============ SERVIÇOS / DIFERENCIAIS ============ */
+        .feature-card {
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            border-radius: var(--radius-xl);
+            padding: 32px 24px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+        .feature-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-glow);
+        }
+        .feature-card:hover::before {
+            background: radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 60%);
+        }
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .feature-icon.blue {
+            background: rgba(14, 165, 233, 0.2);
+            color: #38bdf8;
+        }
+        .feature-icon.purple {
+            background: rgba(124, 58, 237, 0.2);
+            color: #a78bfa;
+        }
+        .feature-icon.cyan {
+            background: rgba(0, 212, 255, 0.2);
+            color: #67e8f9;
+        }
+        .feature-icon.gold {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+        }
+        .feature-card h4 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+        }
+
+        /* ============ SOBRE ============ */
+        .about-section {
+            background: var(--royal-navy);
+            position: relative;
+        }
+        .about-card {
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            border-radius: var(--radius-2xl);
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+        .info-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin: 4px;
+        }
+        .info-tag strong {
+            color: #fff;
+        }
+
+        /* ============ PLANOS ============ */
+        .plan-card {
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            border-radius: var(--radius-2xl);
+            padding: 36px 28px;
+            transition: var(--transition-smooth);
+            position: relative;
+            height: 100%;
+            text-align: center;
+        }
+        .plan-card.destaque {
+            border-color: var(--royal-purple);
+            box-shadow: var(--shadow-glow);
+            transform: scale(1.03);
+            background: rgba(124, 58, 237, 0.06);
+        }
+        .plan-card:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-card);
+            transform: translateY(-4px);
+        }
+        .plan-card.destaque:hover {
+            transform: scale(1.05);
+        }
+        .plan-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--royal-gradient-1);
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
+        }
+        .plan-speed {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 3rem;
+            color: #fff;
+            line-height: 1;
+        }
+        .plan-speed span {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--royal-cyan);
+        }
+        .plan-price small {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 20px 0;
+        }
+        .plan-features li {
+            padding: 6px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .plan-features li i {
+            color: #22c55e;
+            margin-right: 8px;
+        }
+        .btn-plan {
+            background: var(--royal-gradient-1);
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: var(--transition-smooth);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-plan:hover {
+            box-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+            color: #fff;
+        }
+        .btn-plan-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-plan-outline:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        /* ============ COBERTURA ============ */
+        .coverage-section {
+            background: var(--royal-deep);
+            position: relative;
+        }
+        .coverage-map-placeholder {
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            border-radius: var(--radius-2xl);
+            padding: 50px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        .coverage-map-placeholder .map-icon {
+            font-size: 6rem;
+            color: var(--royal-purple);
+            opacity: 0.7;
+            animation: floatOrb 8s ease-in-out infinite;
+        }
+        .city-badge {
+            display: inline-block;
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #38bdf8;
+            margin: 4px;
+            transition: var(--transition-smooth);
+        }
+        .city-badge:hover {
+            background: rgba(14, 165, 233, 0.25);
+            color: #fff;
+        }
+
+        /* ============ CONTATO ============ */
+        .contact-section {
+            background: var(--royal-navy);
+            position: relative;
+        }
+        .contact-card {
+            background: var(--royal-glass);
+            border: 1px solid var(--royal-glass-border);
+            border-radius: var(--radius-2xl);
+            padding: 32px;
+            backdrop-filter: blur(10px);
+            height: 100%;
+            transition: var(--transition-smooth);
+        }
+        .contact-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-card);
+        }
+        .contact-icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+        .contact-icon-circle.blue {
+            background: rgba(14, 165, 233, 0.2);
+            color: #38bdf8;
+        }
+        .contact-icon-circle.purple {
+            background: rgba(124, 58, 237, 0.2);
+            color: #a78bfa;
+        }
+        .contact-icon-circle.green {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        /* ============ FOOTER ============ */
+        .footer-section {
+            background: var(--royal-deep);
+            border-top: 1px solid var(--royal-glass-border);
+            padding: 50px 0 30px;
+        }
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 0.9rem;
+        }
+        .footer-link:hover {
+            color: #fff;
+        }
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition-smooth);
+            font-size: 1rem;
+            margin-right: 8px;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            background: var(--royal-purple);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+        }
+
+        /* ============ WHATSAPP FLOAT ============ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: var(--transition-smooth);
+            animation: pulseWhats 2.5s infinite;
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+            color: #fff;
+        }
+        @keyframes pulseWhats {
+            0%,
+            100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 50px rgba(37, 211, 102, 0.7), 0 0 0 16px rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 991px) {
+            .hero-section {
+                text-align: center;
+                min-height: auto;
+                padding: 120px 0 60px;
+            }
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-visual {
+                margin-top: 40px;
+            }
+            .plan-card.destaque {
+                transform: scale(1);
+            }
+            .plan-card.destaque:hover {
+                transform: scale(1.02);
+            }
+            .navbar-collapse {
+                background: rgba(6, 11, 31, 0.95);
+                border-radius: 16px;
+                padding: 16px;
+                margin-top: 10px;
+                border: 1px solid var(--royal-glass-border);
+            }
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stat .stat-number {
+                font-size: 1.3rem;
+            }
+            .speed-display {
+                font-size: 3rem;
+            }
+            .about-card {
+                padding: 24px;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-icon"><i class="bi bi-wifi"></i></span>
+                Royal Infinity
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRoyal"
+            aria-controls="navbarRoyal" aria-expanded="false" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRoyal">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <li class="nav-item ms-lg-2"><a class="nav-link btn-nav" href="#planos">Assinar Agora</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero-section" id="home">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-bg-orb orb-3"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 hero-content">
+                <div class="hero-badge">
+                    <i class="bi bi-lightning-charge-fill"></i> Fibra Óptica de Ponta
+                </div>
+                <h1 class="hero-title">
+                    Internet que <span class="highlight">redefine</span><br>sua conexão com o mundo
+                </h1>
+                <p class="hero-subtitle">
+                    Ultra velocidade, estabilidade incomparável e suporte que realmente entende você.
+                    A Royal Company Infinity traz o futuro da conectividade para sua casa ou empresa.
+                </p>
+                <div class="d-flex gap-3 flex-wrap mb-4">
+                    <a href="#planos" class="btn-hero"><i class="bi bi-rocket-takeoff-fill me-2"></i>Ver Planos</a>
+                    <a href="#contato" class="btn-hero-outline"><i class="bi bi-telephone-fill me-2"></i>Falar Agora</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="stat-number">+1 Gbps</div>
+                        <div class="stat-label">Velocidade Máxima</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime Garantido</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Suporte Técnico</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 hero-visual">
+                <div class="hero-graphic-card text-center">
+                    <div class="speed-display">500 <span class="speed-unit">MEGA</span></div>
+                    <p class="text-secondary mb-2">Plano mais popular</p>
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                        <span class="pulse-dot"></span>
+                        <small class="text-success">Conexão estável agora</small>
+                    </div>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                        <span class="info-tag"><i class="bi bi-check2-circle"></i> Fibra 100%</span>
+                        <span class="info-tag"><i class="bi bi-shield-check"></i> Sem franquia</span>
+                        <span class="info-tag"><i class="bi bi-router"></i> Wi-Fi 6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== DIFERENCIAIS ==================== -->
+<section class="section-padding" id="diferenciais">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-label">Por que nos escolher</span>
+            <h2 class="section-title">Tecnologia que faz a diferença</h2>
+            <p class="section-desc mx-auto">Cada detalhe pensado para entregar a melhor experiência de navegação, streaming, jogos e trabalho remoto.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon blue"><i class="bi bi-speedometer2"></i></div>
+                    <h4>Velocidade Real</h4>
+                    <p>Entrega de 100% da banda contratada com fibra óptica de ponta a ponta, sem oscilações.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon purple"><i class="bi bi-shield-lock-fill"></i></div>
+                    <h4>Segurança Total</h4>
+                    <p>Proteção contra ataques DDoS, firewall inteligente e monitoramento 24 horas da rede.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon cyan"><i class="bi bi-headset"></i></div>
+                    <h4>Suporte Premium</h4>
+                    <p>Equipe especializada pronta para atender via telefone, WhatsApp ou e-mail a qualquer hora.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon gold"><i class="bi bi-infinity"></i></div>
+                    <h4>Sem Limites</h4>
+                    <p>Navegação ilimitada, sem franquia de dados. Baixe, faça streaming e jogue à vontade.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SOBRE ==================== -->
+<section class="about-section section-padding" id="sobre">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="section-label">Nossa História</span>
+                <h2 class="section-title">Conectando pessoas desde 2025</h2>
+                <p class="section-desc mb-3">
+                    A <strong>Royal Company Infinity LTDA</strong> nasceu em Osasco, São Paulo, com a missão de levar internet de qualidade para toda a região metropolitana.
+                </p>
+                <p class="text-secondary mb-3">
+                    Atuamos como <strong>Provedores de Acesso às Redes de Comunicações</strong> (CNAE 61.90-6-01), registrados na Receita Federal e em situação cadastral <span class="badge bg-success">Ativa</span>.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="info-tag"><strong>CNPJ:</strong> 58.928.617/0001-51</span>
+                    <span class="info-tag"><strong>IE SP:</strong> 152.356.517.111</span>
+                    <span class="info-tag"><strong>Fundação:</strong> 16/01/2025</span>
+                </div>
+                <p class="text-muted small">
+                    <i class="bi bi-geo-alt-fill me-1"></i> Rua Antonio de Campos Toledo, 260 - Ayrosa - Osasco/SP - CEP 06283-000
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-card">
+                    <h4 class="text-white mb-3"><i class="bi bi-building-check me-2"></i>Dados Corporativos</h4>
+                    <ul class="list-unstyled text-secondary mb-0" style="font-size:0.9rem;">
+                        <li class="mb-2"><strong class="text-white">Razão Social:</strong> Royal Company Infinity LTDA</li>
+                        <li class="mb-2"><strong class="text-white">CNPJ:</strong> 58.928.617/0001-51</li>
+                        <li class="mb-2"><strong class="text-white">Inscrição Estadual SP:</strong> 152.356.517.111</li>
+                        <li class="mb-2"><strong class="text-white">Abertura:</strong> 16 de Janeiro de 2025</li>
+                        <li class="mb-2"><strong class="text-white">Atividade Principal:</strong> 61.90-6-01 - Provedores de Acesso às Redes de Comunicações</li>
+                        <li class="mb-2"><strong class="text-white">Situação:</strong> <span class="text-success">Ativa</span></li>
+                        <li class="mb-2"><strong class="text-white">Endereço:</strong> Rua Antonio de Campos Toledo, 260 - Ayrosa - Osasco/SP</li>
+                        <li><strong class="text-white">CEP:</strong> 06283-000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PLANOS ==================== -->
+<section class="section-padding" id="planos" style="background: var(--royal-deep);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-label">Nossos Planos</span>
+            <h2 class="section-title">Escolha o plano ideal para você</h2>
+            <p class="section-desc mx-auto">Conexão de fibra óptica com velocidade simétrica, ideal para residências e empresas.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Plano 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="plan-card">
+                    <div class="plan-speed">300 <span>MEGA</span></div>
+                    <p class="text-secondary mb-2">Plano Essencial</p>
+                    <div class="plan-price">R$ 79<span>,90<small>/mês</small></span></div>
+                    <ul class="plan-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Download 300 Mbps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Upload 150 Mbps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Wi-Fi 5 incluso</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Suporte 24h</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sem franquia de dados</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Instalação grátis</li>
+                    </ul>
+                    <a href="https://wa.me/551156640400?text=Olá! Tenho interesse no plano de 300 MEGA" target="_blank" class="btn-plan-outline">Assinar Plano</a>
+                </div>
+            </div>
+            <!-- Plano 2 - Destaque -->
+            <div class="col-md-6 col-lg-4">
+                <div class="plan-card destaque">
+                    <div class="plan-badge">🌟 MAIS POPULAR</div>
+                    <div class="plan-speed mt-3">500 <span>MEGA</span></div>
+                    <p class="text-secondary mb-2">Plano Premium</p>
+                    <div class="plan-price">R$ 99<span>,90<small>/mês</small></span></div>
+                    <ul class="plan-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Download 500 Mbps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Upload 250 Mbps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Wi-Fi 6 incluso</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Suporte 24h prioritário</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sem franquia de dados</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Instalação grátis</li>
+                        <li><i class="bi bi-check-circle-fill"></i> IP Fixo opcional</li>
+                    </ul>
+                    <a href="https://wa.me/551156640400?text=Olá! Tenho interesse no plano de 500 MEGA" target="_blank" class="btn-plan">Assinar Plano</a>
+                </div>
+            </div>
+            <!-- Plano 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="plan-card">
+                    <div class="plan-speed">1 <span>GIGA</span></div>
+                    <p class="text-secondary mb-2">Plano Ultra</p>
+                    <div class="plan-price">R$ 149<span>,90<small>/mês</small></span></div>
+                    <ul class="plan-features">
+                        <li><i class="bi bi-check-circle-fill"></i> Download 1 Gbps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Upload 500 Mbps</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Wi-Fi 6E incluso</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Suporte VIP 24h</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sem franquia de dados</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Instalação grátis</li>
+                        <li><i class="bi bi-check-circle-fill"></i> IP Fixo + Domínio</li>
+                    </ul>
+                    <a href="https://wa.me/551156640400?text=Olá! Tenho interesse no plano de 1 GIGA" target="_blank" class="btn-plan-outline">Assinar Plano</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== COBERTURA ==================== -->
+<section class="coverage-section section-padding" id="cobertura">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <span class="section-label">Área de Cobertura</span>
+                <h2 class="section-title">Presentes em Osasco e região</h2>
+                <p class="section-desc">
+                    Atendemos toda a cidade de <strong>Osasco/SP</strong> e bairros adjacentes da região metropolitana de São Paulo. Confira se sua rua está na nossa área de cobertura.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Osasco</span>
+                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Ayrosa</span>
+                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Região Metropolitana SP</span>
+                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Em expansão</span>
+                </div>
+                <a href="https://wa.me/551156640400?text=Olá! Gostaria de verificar cobertura para meu endereço" target="_blank" class="btn-hero mt-4 d-inline-block">
+                    <i class="bi bi-whatsapp me-2"></i>Verificar Cobertura
+                </a>
+            </div>
+            <div class="col-lg-7">
+                <div class="coverage-map-placeholder">
+                    <div class="map-icon mb-3"><i class="bi bi-geo-alt-fill"></i></div>
+                    <h4 class="text-white">Cobertura em Expansão</h4>
+                    <p class="text-secondary">Estamos ampliando nossa rede de fibra óptica constantemente.<br>Consulte-nos para saber se já atendemos seu endereço!</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap mt-3">
+                        <span class="info-tag"><i class="bi bi-check-circle-fill text-success"></i> Ayrosa</span>
+                        <span class="info-tag"><i class="bi bi-check-circle-fill text-success"></i> Centro - Osasco</span>
+                        <span class="info-tag"><i class="bi bi-check-circle-fill text-success"></i> Zona Oeste SP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTATO ==================== -->
+<section class="contact-section section-padding" id="contato">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-label">Fale Conosco</span>
+            <h2 class="section-title">Estamos prontos para te atender</h2>
+            <p class="section-desc mx-auto">Canais de atendimento disponíveis para você tirar dúvidas, solicitar instalação ou suporte técnico.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <div class="contact-icon-circle blue mx-auto"><i class="bi bi-whatsapp"></i></div>
+                    <h5 class="text-white">WhatsApp</h5>
+                    <p class="text-secondary small">Resposta rápida e atendimento humanizado</p>
+                    <a href="https://wa.me/551156640400" target="_blank" class="btn btn-sm btn-outline-light rounded-pill px-4 mt-2">
+                        (11) 5664-0400 <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <div class="contact-icon-circle purple mx-auto"><i class="bi bi-telephone-fill"></i></div>
+                    <h5 class="text-white">Telefone</h5>
+                    <p class="text-secondary small">Ligação direta para nossa central</p>
+                    <a href="tel:+551156640400" class="btn btn-sm btn-outline-light rounded-pill px-4 mt-2">
+                        (11) 5664-0400 <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <div class="contact-icon-circle green mx-auto"><i class="bi bi-envelope-fill"></i></div>
+                    <h5 class="text-white">E-mail</h5>
+                    <p class="text-secondary small">Envie sua mensagem a qualquer hora</p>
+                    <a href="mailto:admroyalcompany@gmail.com" class="btn btn-sm btn-outline-light rounded-pill px-4 mt-2">
+                        admroyalcompany@gmail.com <i class="bi bi-arrow-up-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Endereço completo -->
+        <div class="text-center mt-5">
+            <div class="d-inline-block text-secondary" style="background: var(--royal-glass); border: 1px solid var(--royal-glass-border); border-radius: var(--radius-xl); padding: 20px 28px;">
+                <i class="bi bi-geo-alt-fill me-1" style="color: var(--royal-purple);"></i>
+                <strong class="text-white">Royal Company Infinity LTDA</strong><br>
+                Rua Antonio de Campos Toledo, 260 - Ayrosa - Osasco/SP - CEP 06283-000
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 mb-3">
+                <div class="footer-brand mb-2">
+                    <i class="bi bi-wifi me-2" style="color: var(--royal-cyan);"></i>Royal Infinity
+                </div>
+                <p class="text-muted small">Provedor de acesso às redes de comunicações.<br>Conectando você ao futuro desde 2025.</p>
+                <div class="d-flex mt-3">
+                    <a href="https://wa.me/551156640400" target="_blank" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="mailto:admroyalcompany@gmail.com" class="social-icon" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="tel:+551156640400" class="social-icon" title="Telefone"><i class="bi bi-telephone-fill"></i></a>
+                    <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <h6 class="text-white mb-3">Links Rápidos</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="footer-link">Início</a></li>
+                    <li><a href="#diferenciais" class="footer-link">Diferenciais</a></li>
+                    <li><a href="#sobre" class="footer-link">Sobre Nós</a></li>
+                    <li><a href="#planos" class="footer-link">Planos</a></li>
+                    <li><a href="#cobertura" class="footer-link">Cobertura</a></li>
+                    <li><a href="#contato" class="footer-link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <h6 class="text-white mb-3">Informações Legais</h6>
+                <p class="text-muted small mb-1"><strong>CNPJ:</strong> 58.928.617/0001-51</p>
+                <p class="text-muted small mb-1"><strong>IE SP:</strong> 152.356.517.111</p>
+                <p class="text-muted small mb-1"><strong>CNAE:</strong> 61.90-6-01</p>
+                <p class="text-muted small mb-0"><strong>Situação:</strong> Ativa</p>
+            </div>
+        </div>
+        <hr style="border-color: rgba(255,255,255,0.08);">
+        <div class="text-center text-muted small">
+            &copy; 2025-2026 Royal Company Infinity LTDA. Todos os direitos reservados. | Osasco/SP
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOAT ==================== -->
+<a href="https://wa.me/551156640400?text=Olá! Gostaria de mais informações sobre os planos de internet." target="_blank" class="whatsapp-float" title="Fale conosco pelo WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('mainNavbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const navbarHeight = navbar.offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset -
+                    navbarHeight - 10;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const navCollapse = document.getElementById('navbarRoyal');
+                if (navCollapse.classList.contains('show')) {
+                    navCollapse.classList.remove('show');
+                }
+            }
+        });
+    });
+
+    // Update active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.btn-nav)');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>
