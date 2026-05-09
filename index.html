@@ -1,4 +1,484 @@
-name="description" content="Gtex Fibra Óptica - Internet ultra rápida para sua casa e empresa em São Luís - MA.">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gtex Fibra Óptica - Internet ultra rápida para sua casa e empresa em São Luís - MA.">
+  <meta name="keywords" content="internet fibra óptica, provedor internet, São Luís, Maranhão, wifi rápido">
+  <meta name="author" content="Gtex Fibra Óptica LTDA">
+  <title>Gtex Fibra Óptica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      background:rgba(0,0,0,0.85);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:2rem;
+      font-weight:700;
+      color:#00bfff;
+    }
+
+    .logo span{
+      color:#7dff00;
+    }
+
+    .menu{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    .menu a:hover{
+      color:#00bfff;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop') center/cover;
+      text-align:left;
+      padding-top:100px;
+    }
+
+    .hero-content h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero-content p{
+      max-width:650px;
+      margin-bottom:30px;
+      font-size:1.1rem;
+      color:#ddd;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      border-radius:50px;
+      background:#00bfff;
+      color:#fff;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#0099cc;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      color:#00bfff;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#0c1229;
+      padding:30px;
+      border-radius:20px;
+      transition:.3s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(0,191,255,.3);
+    }
+
+    .card i{
+      font-size:3rem;
+      margin-bottom:20px;
+      color:#00bfff;
+    }
+
+    .plans{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .plan{
+      background:#0c1229;
+      padding:40px;
+      border-radius:25px;
+      text-align:center;
+      border:2px solid transparent;
+      transition:.3s;
+    }
+
+    .plan:hover{
+      border-color:#00bfff;
+      transform:scale(1.03);
+    }
+
+    .plan h3{
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:3rem;
+      color:#7dff00;
+      margin:20px 0;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:20px;
+      height:250px;
+      object-fit:cover;
+      transition:.3s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .testimonial{
+      background:#0c1229;
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .testimonial img{
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      margin-bottom:15px;
+    }
+
+    form{
+      display:grid;
+      gap:20px;
+      max-width:700px;
+      margin:auto;
+    }
+
+    input,textarea{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:12px;
+      background:#111936;
+      color:#fff;
+    }
+
+    footer{
+      background:#02040d;
+      padding:60px 0 20px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      margin-bottom:40px;
+    }
+
+    .socials a{
+      margin-right:15px;
+      font-size:1.5rem;
+      color:#00bfff;
+    }
+
+    .copy{
+      text-align:center;
+      color:#aaa;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:20px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:65px;
+      height:65px;
+      background:#25d366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      z-index:999;
+      box-shadow:0 0 20px rgba(37,211,102,.5);
+    }
+
+    @media(max-width:768px){
+      .hero-content h1{
+        font-size:2.5rem;
+      }
+
+      .menu{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Gtex <span>Fibra</span></div>
+
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <div>
+      <h1>Internet Fibra Óptica Ultra Rápida</h1>
+      <p>
+        Conectando sua casa e empresa com velocidade, estabilidade e tecnologia de ponta em São Luís - Maranhão.
+      </p>
+      <a href="https://wa.me/5598984182490" class="btn">Fale no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sobre a Empresa</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-building"></i>
+        <h3>Empresa Ativa</h3>
+        <p>
+          A Gtex Fibra Óptica LTDA atua no segmento de provedores de acesso às redes de comunicações.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3>Tecnologia</h3>
+        <p>
+          Trabalhamos com internet fibra óptica de alta velocidade e baixa latência.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Localização</h3>
+        <p>
+          Rua Av Mal.castelo Branco, Sala 207, Ilhinha, São Luís - MA.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nossos Serviços</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-wifi"></i>
+        <h3>Internet Residencial</h3>
+        <p>Conexão rápida para streaming, estudos e jogos online.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Internet Empresarial</h3>
+        <p>Internet dedicada para empresas e escritórios.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>Suporte Técnico</h3>
+        <p>Atendimento rápido e especializado.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-signal"></i>
+        <h3>Wi-Fi Potente</h3>
+        <p>Melhor alcance e estabilidade para sua rede.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Planos de Internet</h2>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>200 Mega</h3>
+        <div class="price">R$ 89</div>
+        <p>Wi-Fi Grátis</p>
+        <p>Suporte Técnico</p>
+        <p>Instalação Rápida</p>
+        <br>
+        <a href="#contato" class="btn">Assinar</a>
+      </div>
+
+      <div class="plan">
+        <h3>500 Mega</h3>
+        <div class="price">R$ 119</div>
+        <p>Wi-Fi Premium</p>
+        <p>Ideal para Games</p>
+        <p>Streaming 4K</p>
+        <br>
+        <a href="#contato" class="btn">Assinar</a>
+      </div>
+
+      <div class="plan">
+        <h3>700 Mega</h3>
+        <div class="price">R$ 149</div>
+        <p>Ultra Velocidade</p>
+        <p>Empresas e Gamers</p>
+        <p>Máxima Performance</p>
+        <br>
+        <a href="#contato" class="btn">Assinar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="container">
+    <div class="section-title">
+      <h2>Galeria</h2>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Depoimentos</h2>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <h3>Carlos Silva</h3>
+        <p>Internet extremamente rápida e suporte excelente.</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg">
+        <h3>Maria Santos</h3>
+        <p>Melhor internet que já usei em São Luís.</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/11.jpg">
+        <h3>João Oliveira</h3>
+        <p>Excelente para jogos e streaming sem travamentos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="section-title">
+      <h2>Entre em Contato</h2>
+    </div>
+
+    <form id="contactForm">
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu E-mail" required>
+      <input type="tel" placeholder="Seu Telefone" required>
       <textarea rows="6" placeholder="Digite sua mensagem"></textarea>
       <button class="btn">Enviar Mensagem</button>
     </form>
