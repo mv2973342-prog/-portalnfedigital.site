@@ -1,896 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gtex Fibra Óptica - Internet ultra rápida via fibra óptica em São Luís MA. Planos residenciais e empresariais, instalação grátis e suporte premium.">
-    <meta name="keywords" content="fibra óptica, internet, São Luís, provedor, Gtex, fibra, banda larga, link dedicado, gamer, streaming">
-    <meta name="author" content="Gtex Fibra Óptica LTDA">
-    <title>Gtex Fibra Óptica | Internet Ultra Rápida em São Luís</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #0a0b14;
-            --bg-secondary: #11121d;
-            --primary: #0a192f;
-            --neon-blue: #00b4d8;
-            --neon-purple: #7b2ff7;
-            --neon-green: #00e676;
-            --text-light: #e0e0e0;
-            --text-muted: #a0a0b0;
-            --card-bg: #141625;
-            --border-glow: rgba(0, 180, 216, 0.3);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Efeitos globais */
-        .glow-text {
-            color: var(--neon-blue);
-            text-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 34px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-neon {
-            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-            color: white;
-            box-shadow: 0 4px 20px rgba(0, 180, 216, 0.4);
-        }
-
-        .btn-neon:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.6);
-        }
-
-        .btn-outline-neon {
-            border: 2px solid var(--neon-blue);
-            color: var(--neon-blue);
-            background: transparent;
-        }
-
-        .btn-outline-neon:hover {
-            background: var(--neon-blue);
-            color: #000;
-        }
-
-        /* Header */
-        header {
-            background: rgba(10, 11, 20, 0.9);
-            backdrop-filter: blur(12px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 180, 216, 0.15);
-        }
-
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 75px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-        }
-
-        .logo svg {
-            width: 44px;
-            height: 44px;
-            filter: drop-shadow(0 0 8px #00b4d8);
-        }
-
-        .logo-text .gtex {
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            color: var(--neon-blue);
-            text-shadow: 0 0 15px #00b4d8;
-        }
-
-        .logo-text .slogan {
-            font-size: 0.65rem;
-            letter-spacing: 4px;
-            color: #aaa;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #ccc;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        nav a:hover {
-            color: var(--neon-blue);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.6rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            position: relative;
-            background: radial-gradient(circle at 30% 50%, #0f1a2f 0%, #0a0b14 70%);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path d="M10 200 Q100 50 200 200 T390 200" stroke="%2300b4d8" stroke-width="1.5" fill="none" opacity="0.15"/><circle cx="200" cy="200" r="3" fill="%2300e676" opacity="0.3"/><circle cx="50" cy="150" r="2" fill="%2300b4d8" opacity="0.4"/><circle cx="350" cy="250" r="4" fill="%2300b4d8" opacity="0.2"/></svg>') repeat;
-        }
-
-        .hero .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 3.8rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero-text h1 span {
-            color: var(--neon-blue);
-            text-shadow: 0 0 25px #00b4d8;
-        }
-
-        .hero-text p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            color: #bbb;
-        }
-
-        .hero-visual {
-            flex: 1;
-            position: relative;
-            height: 400px;
-        }
-
-        .fiber-circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            border: 2px dashed var(--neon-blue);
-            opacity: 0.4;
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        .fiber-line {
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-            animation: slideLine 3s ease-in-out infinite;
-        }
-
-        @keyframes slideLine {
-            0% { left: -100%; opacity: 0; }
-            50% { opacity: 1; }
-            100% { left: 100%; opacity: 0; }
-        }
-
-        /* Seções gerais */
-        section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            width: 70px;
-            height: 3px;
-            background: var(--neon-blue);
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .section-title p {
-            color: #aaa;
-            font-size: 1.1rem;
-        }
-
-        /* Planos */
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .plan-card {
-            background: var(--card-bg);
-            border-radius: 24px;
-            padding: 40px 25px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--neon-blue);
-            box-shadow: 0 15px 40px rgba(0, 180, 216, 0.2);
-        }
-
-        .plan-card.popular {
-            border: 2px solid var(--neon-blue);
-            box-shadow: 0 0 30px rgba(0, 180, 216, 0.2);
-        }
-
-        .plan-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .plan-card .price {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--neon-blue);
-            margin: 15px 0;
-        }
-
-        .plan-card ul {
-            list-style: none;
-            margin: 25px 0;
-        }
-
-        .plan-card ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .plan-card ul li i {
-            color: var(--neon-green);
-        }
-
-        /* Benefícios */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-        }
-
-        .benefit-item {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 35px 20px;
-            text-align: center;
-            transition: 0.3s;
-            border: 1px solid transparent;
-        }
-
-        .benefit-item:hover {
-            border-color: var(--neon-purple);
-            background: #1a1d2e;
-        }
-
-        .benefit-item i {
-            font-size: 2.6rem;
-            color: var(--neon-blue);
-            margin-bottom: 15px;
-        }
-
-        .benefit-item h4 {
-            color: white;
-            margin-bottom: 8px;
-        }
-
-        /* Área Gamer / Streaming */
-        .gamer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .gamer-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            height: 250px;
-            display: flex;
-            align-items: flex-end;
-            background-size: cover;
-            background-position: center;
-            border: 1px solid #1f2233;
-            transition: 0.3s;
-        }
-
-        .gamer-card:hover {
-            transform: scale(1.02);
-            border-color: var(--neon-blue);
-        }
-
-        .gamer-card .overlay {
-            background: linear-gradient(transparent, #000000dd);
-            width: 100%;
-            padding: 20px;
-            color: white;
-        }
-
-        .gamer-card h4 {
-            margin-bottom: 5px;
-        }
-
-        /* Depoimentos */
-        .testimonials-slider {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 20px;
-        }
-
-        .testimonial-card {
-            min-width: 320px;
-            flex: 0 0 auto;
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid #222539;
-            scroll-snap-align: start;
-        }
-
-        .testimonial-card .quote {
-            font-style: italic;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-
-        .client {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: white;
-        }
-
-        .client img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        /* Equipe */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-        }
-
-        .team-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #1d2135;
-        }
-
-        .team-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid var(--neon-blue);
-        }
-
-        /* WhatsApp Section */
-        .whatsapp-section {
-            background: linear-gradient(135deg, #0f1a2f, #11121d);
-            border-top: 1px solid rgba(0, 180, 216, 0.2);
-        }
-
-        .whatsapp-flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .mockup-phone {
-            max-width: 300px;
-            filter: drop-shadow(0 10px 20px rgba(0,180,216,0.3));
-        }
-
-        /* Footer */
-        footer {
-            background: #070912;
-            padding: 60px 0 25px;
-            border-top: 1px solid rgba(0, 180, 216, 0.15);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .footer-col a, .footer-col p {
-            color: #aaa;
-            display: block;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-
-        .footer-col a:hover {
-            color: var(--neon-blue);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-icons a {
-            background: rgba(255,255,255,0.05);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: #ccc;
-            transition: 0.3s;
-        }
-
-        .social-icons a:hover {
-            background: var(--neon-blue);
-            color: #000;
-        }
-
-        .copyright {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 20px;
-        }
-
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 5px 25px rgba(37,211,102,0.5);
-            z-index: 999;
-            transition: 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .hero .container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2.4rem;
-            }
-
-            nav ul {
-                position: fixed;
-                top: 75px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 75px);
-                background: var(--bg-dark);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 35px;
-                transition: 0.4s;
-            }
-
-            nav ul.active {
-                left: 0;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-        }
-
-        /* Animações */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(25px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gtex Fibra Óptica - Internet ultra rápida para sua casa e empresa em São Luís - MA.">
+  <meta name="keywords" content="internet fibra óptica, provedor internet, São Luís, Maranhão, wifi rápido">
+  <meta name="author" content="Gtex Fibra Óptica LTDA">
+  <title>Gtex Fibra Óptica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      background:rgba(0,0,0,0.85);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:2rem;
+      font-weight:700;
+      color:#00bfff;
+    }
+
+    .logo span{
+      color:#7dff00;
+    }
+
+    .menu{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    .menu a:hover{
+      color:#00bfff;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop') center/cover;
+      text-align:left;
+      padding-top:100px;
+    }
+
+    .hero-content h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero-content p{
+      max-width:650px;
+      margin-bottom:30px;
+      font-size:1.1rem;
+      color:#ddd;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      border-radius:50px;
+      background:#00bfff;
+      color:#fff;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#0099cc;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      color:#00bfff;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#0c1229;
+      padding:30px;
+      border-radius:20px;
+      transition:.3s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(0,191,255,.3);
+    }
+
+    .card i{
+      font-size:3rem;
+      margin-bottom:20px;
+      color:#00bfff;
+    }
+
+    .plans{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .plan{
+      background:#0c1229;
+      padding:40px;
+      border-radius:25px;
+      text-align:center;
+      border:2px solid transparent;
+      transition:.3s;
+    }
+
+    .plan:hover{
+      border-color:#00bfff;
+      transform:scale(1.03);
+    }
+
+    .plan h3{
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:3rem;
+      color:#7dff00;
+      margin:20px 0;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:20px;
+      height:250px;
+      object-fit:cover;
+      transition:.3s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .testimonial{
+      background:#0c1229;
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .testimonial img{
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      margin-bottom:15px;
+    }
+
+    form{
+      display:grid;
+      gap:20px;
+      max-width:700px;
+      margin:auto;
+    }
+
+    input,textarea{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:12px;
+      background:#111936;
+      color:#fff;
+    }
+
+    footer{
+      background:#02040d;
+      padding:60px 0 20px;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      margin-bottom:40px;
+    }
+
+    .socials a{
+      margin-right:15px;
+      font-size:1.5rem;
+      color:#00bfff;
+    }
+
+    .copy{
+      text-align:center;
+      color:#aaa;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:20px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:65px;
+      height:65px;
+      background:#25d366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      z-index:999;
+      box-shadow:0 0 20px rgba(37,211,102,.5);
+    }
+
+    @media(max-width:768px){
+      .hero-content h1{
+        font-size:2.5rem;
+      }
+
+      .menu{
+        display:none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <!-- SVG Logo com efeito neon -->
-                <svg viewBox="0 0 60 60" fill="none">
-                    <circle cx="30" cy="30" r="28" stroke="#00b4d8" stroke-width="2.5" fill="none"/>
-                    <path d="M18 30 L42 30 M30 18 L30 42" stroke="#00b4d8" stroke-width="4" stroke-linecap="round"/>
-                    <circle cx="18" cy="30" r="4" fill="#00b4d8"/>
-                    <circle cx="42" cy="30" r="4" fill="#00b4d8"/>
-                    <circle cx="30" cy="18" r="4" fill="#00b4d8"/>
-                    <circle cx="30" cy="42" r="4" fill="#00b4d8"/>
-                </svg>
-                <div class="logo-text">
-                    <span class="gtex">GTEX</span>
-                    <span class="slogan">Fibra Óptica</span>
-                </div>
-            </a>
-            <nav>
-                <ul id="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#beneficios">Benefícios</a></li>
-                    <li><a href="#cobertura">Cobertura</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-            <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Gtex <span>Fibra</span></div>
+
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <div>
+      <h1>Internet Fibra Óptica Ultra Rápida</h1>
+      <p>
+        Conectando sua casa e empresa com velocidade, estabilidade e tecnologia de ponta em São Luís - Maranhão.
+      </p>
+      <a href="https://wa.me/5598984182490" class="btn">Fale no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sobre a Empresa</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-building"></i>
+        <h3>Empresa Ativa</h3>
+        <p>
+          A Gtex Fibra Óptica LTDA atua no segmento de provedores de acesso às redes de comunicações.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-network-wired"></i>
+        <h3>Tecnologia</h3>
+        <p>
+          Trabalhamos com internet fibra óptica de alta velocidade e baixa latência.
+        </p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Localização</h3>
+        <p>
+          Rua Av Mal.castelo Branco, Sala 207, Ilhinha, São Luís - MA.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nossos Serviços</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-wifi"></i>
+        <h3>Internet Residencial</h3>
+        <p>Conexão rápida para streaming, estudos e jogos online.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Internet Empresarial</h3>
+        <p>Internet dedicada para empresas e escritórios.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>Suporte Técnico</h3>
+        <p>Atendimento rápido e especializado.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-signal"></i>
+        <h3>Wi-Fi Potente</h3>
+        <p>Melhor alcance e estabilidade para sua rede.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Planos de Internet</h2>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>200 Mega</h3>
+        <div class="price">R$ 89</div>
+        <p>Wi-Fi Grátis</p>
+        <p>Suporte Técnico</p>
+        <p>Instalação Rápida</p>
+        <br>
+        <a href="#contato" class="btn">Assinar</a>
+      </div>
+
+      <div class="plan">
+        <h3>500 Mega</h3>
+        <div class="price">R$ 119</div>
+        <p>Wi-Fi Premium</p>
+        <p>Ideal para Games</p>
+        <p>Streaming 4K</p>
+        <br>
+        <a href="#contato" class="btn">Assinar</a>
+      </div>
+
+      <div class="plan">
+        <h3>700 Mega</h3>
+        <div class="price">R$ 149</div>
+        <p>Ultra Velocidade</p>
+        <p>Empresas e Gamers</p>
+        <p>Máxima Performance</p>
+        <br>
+        <a href="#contato" class="btn">Assinar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="container">
+    <div class="section-title">
+      <h2>Galeria</h2>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Depoimentos</h2>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <h3>Carlos Silva</h3>
+        <p>Internet extremamente rápida e suporte excelente.</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg">
+        <h3>Maria Santos</h3>
+        <p>Melhor internet que já usei em São Luís.</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/11.jpg">
+        <h3>João Oliveira</h3>
+        <p>Excelente para jogos e streaming sem travamentos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="section-title">
+      <h2>Entre em Contato</h2>
+    </div>
+
+    <form id="contactForm">
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu E-mail" required>
+      <input type="tel" placeholder="Seu Telefone" required>
+      <textarea rows="6" placeholder="Digite sua mensagem"></textarea>
+      <button class="btn">Enviar Mensagem</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <h3>Gtex Fibra Óptica</h3>
+        <p>
+          CNPJ: 60.911.564/0001-08
+        </p>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p>(98) 98418-2490</p>
+        <p>gtexfibraoptica@gmail.com</p>
+      </div>
+
+      <div>
+        <h3>Endereço</h3>
+        <p>
+          Rua Av Mal.castelo Branco, 148 Sala 207, Ilhinha - São Luís/MA
+        </p>
+      </div>
+
+      <div>
+        <h3>Redes Sociais</h3>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
-    </header>
+      </div>
 
-    <!-- Hero / Home -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-text fade-in">
-                <h1>Internet <span>Ultra Rápida</span> para sua <span>Casa</span> e <span>Empresa</span></h1>
-                <p>Tecnologia de fibra óptica com estabilidade, baixa latência e instalação grátis. Navegue, jogue e trabalhe no máximo potencial.</p>
-                <a href="#planos" class="btn btn-neon">Assinar Agora</a>
-            </div>
-            <div class="hero-visual fade-in">
-                <div class="fiber-circle"></div>
-                <div class="fiber-line" style="top:20%;"></div>
-                <div class="fiber-line" style="top:50%; animation-delay: 1s;"></div>
-                <div class="fiber-line" style="top:80%; animation-delay: 2s;"></div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Planos -->
-    <section id="planos">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Nossos <span class="glow-text">Planos</span></h2>
-                <p>Velocidade real para você escolher</p>
-            </div>
-            <div class="plans-grid fade-in">
-                <div class="plan-card">
-                    <h3>Básico</h3>
-                    <div class="price">100<span style="font-size:1.2rem;">Mbps</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Download 100 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Upload 50 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Wi-Fi incluído</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte técnico</li>
-                    </ul>
-                    <a href="https://wa.me/5598984182490?text=Quero%20assinar%20o%20plano%20Básico%20100Mbps" target="_blank" class="btn btn-outline-neon">Assinar</a>
-                </div>
-                <div class="plan-card popular">
-                    <h3>Premium</h3>
-                    <div class="price">300<span style="font-size:1.2rem;">Mbps</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Download 300 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Upload 150 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Wi-Fi 6</li>
-                        <li><i class="fas fa-check-circle"></i> IP fixo grátis</li>
-                    </ul>
-                    <a href="https://wa.me/5598984182490?text=Quero%20assinar%20o%20plano%20Premium%20300Mbps" target="_blank" class="btn btn-neon">Assinar</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Ultra Gamer</h3>
-                    <div class="price">1<span style="font-size:1.2rem;">Gbps</span></div>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Download 1 Gbps</li>
-                        <li><i class="fas fa-check-circle"></i> Upload 500 Mbps</li>
-                        <li><i class="fas fa-check-circle"></i> Roteador gamer</li>
-                        <li><i class="fas fa-check-circle"></i> Suporte prioritário</li>
-                    </ul>
-                    <a href="https://wa.me/5598984182490?text=Quero%20assinar%20o%20plano%20Ultra%20Gamer%201Gbps" target="_blank" class="btn btn-outline-neon">Assinar</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="copy">
+      © 2026 Gtex Fibra Óptica LTDA - Todos os direitos reservados.
+      <br><br>
+      <a href="politica.html">Política de Privacidade</a> |
+      <a href="termos.html">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
 
-    <!-- Benefícios -->
-    <section id="beneficios" style="background: #11121d;">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Por que escolher a <span class="glow-text">GTEX?</span></h2>
-                <p>Vantagens que fazem a diferença</p>
-            </div>
-            <div class="benefits-grid fade-in">
-                <div class="benefit-item"><i class="fas fa-tachometer-alt"></i><h4>Ultra Velocidade</h4><p>Conexão simétrica e estável</p></div>
-                <div class="benefit-item"><i class="fas fa-signal"></i><h4>Baixa Latência</h4><p>Ideal para jogos e videoconferências</p></div>
-                <div class="benefit-item"><i class="fas fa-headset"></i><h4>Suporte Rápido</h4><p>Atendimento humanizado 24h</p></div>
-                <div class="benefit-item"><i class="fas fa-download"></i><h4>Instalação Grátis</h4><p>Sem custo adicional</p></div>
-                <div class="benefit-item"><i class="fas fa-wifi"></i><h4>Wi-Fi Potente</h4><p>Cobertura total na sua casa</p></div>
-            </div>
-        </div>
-    </section>
+<a class="whatsapp" href="https://wa.me/5598984182490">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-    <!-- Cobertura -->
-    <section id="cobertura">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Cobertura em <span class="glow-text">São Luís</span></h2>
-                <p>Estamos expandindo para levar fibra até você</p>
-            </div>
-            <div style="display: flex; gap: 30px; flex-wrap: wrap; align-items: center;" class="fade-in">
-                <div style="flex:1; min-width:280px;">
-                    <img src="https://via.placeholder.com/600x300/0a192f/00b4d8?text=Mapa+de+Cobertura+São+Luís" alt="Mapa de cobertura" style="width:100%; border-radius:16px; border:1px solid #222;">
-                </div>
-                <div style="flex:1; display: grid; gap:15px;">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=400&auto=format&fit=crop" alt="Técnico instalando fibra" style="border-radius:12px; width:100%; height:140px; object-fit:cover;">
-                    <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=400&auto=format&fit=crop" alt="Poste fibra óptica" style="border-radius:12px; width:100%; height:140px; object-fit:cover;">
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Mensagem enviada com sucesso!');
+  });
+</script>
 
-    <!-- Área Gamer / Streaming -->
-    <section style="background: #11121d;">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Perfeito para <span class="glow-text">Gamers e Streaming</span></h2>
-                <p>Baixa latência e qualidade 4K</p>
-            </div>
-            <div class="gamer-grid fade-in">
-                <div class="gamer-card" style="background-image: url('https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=500&auto=format&fit=crop');">
-                    <div class="overlay"><h4>Setup Gamer</h4><p>Ping baixo, sem lag</p></div>
-                </div>
-                <div class="gamer-card" style="background-image: url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=500&auto=format&fit=crop');">
-                    <div class="overlay"><h4>Streaming 4K</h4><p>Filmes e séries sem travamento</p></div>
-                </div>
-                <div class="gamer-card" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=500&auto=format&fit=crop');">
-                    <div class="overlay"><h4>Conectividade Total</h4><p>Notebook, celular e smart TV</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section id="depoimentos">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Clientes <span class="glow-text">Felizes</span></h2>
-                <p>Quem usa recomenda</p>
-            </div>
-            <div class="testimonials-slider fade-in">
-                <div class="testimonial-card">
-                    <p class="quote">"A GTEX transformou nossa conexão. Agora trabalhamos em casa sem queda de sinal."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria"><div><h4>Maria Silva</h4><small>Família</small></div></div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="quote">"Nossa empresa depende de link dedicado e nunca tivemos problemas. Excelente suporte."</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos"><div><h4>Carlos Oliveira</h4><small>Empresário</small></div></div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="quote">"Sou gamer e o ping caiu muito. Fibra de verdade, recomendo!"</p>
-                    <div class="client"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Lucas"><div><h4>Lucas Gameplay</h4><small>Gamer</small></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Equipe Técnica -->
-    <section style="background: #11121d;">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Nossa <span class="glow-text">Equipe Técnica</span></h2>
-                <p>Profissionais qualificados</p>
-            </div>
-            <div class="team-grid fade-in">
-                <div class="team-card"><img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Técnico"><h4>André Costa</h4><p>Instalador Sênior</p></div>
-                <div class="team-card"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Técnica"><h4>Paula Santos</h4><p>Suporte Técnico</p></div>
-                <div class="team-card"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Técnico"><h4>Rafael Mendes</h4><p>Rede Óptica</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Atendimento WhatsApp -->
-    <section class="whatsapp-section" id="contato">
-        <div class="container">
-            <div class="whatsapp-flex fade-in">
-                <div>
-                    <h2 style="font-size:2.2rem; margin-bottom:15px;">Atendimento <span class="glow-text">Instantâneo</span></h2>
-                    <p style="font-size:1.2rem; margin-bottom:25px;">Fale conosco pelo WhatsApp, solicite 2ª via, suporte técnico ou contrate já.</p>
-                    <a href="https://wa.me/5598984182490?text=Olá%2C%20preciso%20de%20atendimento" target="_blank" class="btn btn-neon"><i class="fab fa-whatsapp"></i> (98) 98418-2490</a>
-                    <p style="margin-top:15px; color:#aaa;">E-mail: gtexfibraoptica@gmail.com</p>
-                </div>
-                <img src="https://cdn.pixabay.com/photo/2020/04/08/09/31/smartphone-5016781_960_720.png" alt="Mockup celular" class="mockup-phone" style="width:280px;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>GTEX Fibra Óptica</h4>
-                    <p>Conectando você ao futuro.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Links Úteis</h4>
-                    <a href="#home">Início</a>
-                    <a href="#planos">Planos</a>
-                    <a href="#beneficios">Benefícios</a>
-                    <a href="privacidade.html">Política de Privacidade</a>
-                    <a href="termos.html">Termos de Uso</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <p>(98) 98418-2490</p>
-                    <p>gtexfibraoptica@gmail.com</p>
-                    <p>Av. Mal. Castelo Branco, 148 – Sala 207, Ilhinha, São Luís – MA, 65076-670</p>
-                </div>
-                <div class="footer-col">
-                    <h4>CNPJ</h4>
-                    <p>60.911.564/0001-08</p>
-                    <p>Gtex Fibra Óptica LTDA</p>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2026 Gtex Fibra Óptica LTDA – Todos os direitos reservados. Provedor de acesso licenciado.
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/5598984182490?text=Olá%2C%20visitei%20o%20site%20e%20quero%20mais%20informações" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
-
-    <script>
-        // Menu mobile
-        const toggle = document.getElementById('menu-toggle');
-        const nav = document.getElementById('nav-links');
-        toggle.addEventListener('click', () => nav.classList.toggle('active'));
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => nav.classList.remove('active'));
-        });
-
-        // Fade-in animation on scroll
-        const fadeEls = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.15 });
-        fadeEls.forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
