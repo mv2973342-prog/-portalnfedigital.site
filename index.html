@@ -3,1264 +3,996 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Company Infinity | Internet de Alta Velocidade</title>
+    <meta name="description" content="Gtex Fibra Óptica LTDA - Provedor de acesso à internet via fibra óptica em São Luís MA. Planos residenciais e empresariais, instalação e manutenção de redes.">
+    <meta name="keywords" content="fibra óptica, internet, São Luís, provedor, Gtex, redes, instalação, manutenção, link dedicado">
+    <meta name="author" content="Gtex Fibra Óptica">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.gtexfibraoptica.com.br/">
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="Gtex Fibra Óptica - Internet de alta velocidade em São Luís">
+    <meta property="og:description" content="Conectividade estável com fibra óptica. Planos para sua casa ou empresa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gtexfibraoptica.com.br/">
+    <meta property="og:image" content="https://www.gtexfibraoptica.com.br/img/og-image.jpg">
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Gtex Fibra Óptica | Internet banda larga em São Luís - MA</title>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --royal-deep: #060b1f;
-            --royal-navy: #0a1628;
-            --royal-blue: #0f1f3d;
-            --royal-electric: #0ea5e9;
-            --royal-cyan: #00d4ff;
-            --royal-purple: #7c3aed;
-            --royal-violet: #a855f7;
-            --royal-gold: #f59e0b;
-            --royal-gradient-1: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 50%, #a855f7 100%);
-            --royal-gradient-2: linear-gradient(135deg, #060b1f 0%, #0a1628 40%, #0f1f3d 100%);
-            --royal-gradient-3: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 30%, #7c3aed 100%);
-            --royal-glass: rgba(255, 255, 255, 0.04);
-            --royal-glass-border: rgba(255, 255, 255, 0.08);
-            --text-primary: #e2e8f0;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --shadow-glow: 0 0 40px rgba(14, 165, 233, 0.15), 0 0 80px rgba(124, 58, 237, 0.08);
-            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(255, 255, 255, 0.04);
-            --radius-xl: 20px;
-            --radius-2xl: 28px;
-            --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #0a192f;
+            --secondary: #00b4d8;
+            --accent: #0077b6;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gray: #6c757d;
+            --dark-text: #212529;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--royal-deep);
-            color: var(--text-primary);
+            color: var(--dark-text);
+            background: var(--white);
+            line-height: 1.6;
             overflow-x: hidden;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ============ SCROLLBAR ============ */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--royal-deep);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--royal-purple);
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--royal-violet);
-        }
-
-        /* ============ NAVBAR ============ */
-        .navbar {
-            background: rgba(6, 11, 31, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--royal-glass-border);
-            padding: 14px 0;
-            transition: var(--transition-smooth);
-            z-index: 1050;
-        }
-        .navbar.scrolled {
-            background: rgba(6, 11, 31, 0.92);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            padding: 10px 0;
-        }
-        .navbar-brand {
-            font-family: 'Space Grotesk', sans-serif;
+        h1, h2, h3, h4 {
             font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -0.5px;
-            background: var(--royal-gradient-3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #0096b4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,180,216,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .logo svg {
+            width: 45px;
+            height: 45px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .gtex {
+            font-size: 1.8rem;
+            line-height: 1;
+            letter-spacing: 2px;
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .logo-text .slogan {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: #ccc;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--white);
+            font-weight: 500;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        nav a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: var(--secondary);
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a192f 0%, #0d1b2a 100%);
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,180,216,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--secondary);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 500px;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(0,180,216,0.4));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Seções */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Sobre */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image svg {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 16px;
+            color: var(--dark-text);
+        }
+
+        .info-list li {
+            padding: 8px 0;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        .navbar-brand .brand-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--royal-gradient-1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            color: #fff;
-            -webkit-text-fill-color: #fff;
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
-        }
-        .navbar-nav .nav-link {
-            color: var(--text-secondary);
-            font-weight: 500;
-            margin: 0 6px;
-            padding: 8px 16px !important;
-            border-radius: 30px;
-            transition: var(--transition-smooth);
-            position: relative;
-            font-size: 0.95rem;
-        }
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .navbar-nav .nav-link.btn-nav {
-            background: var(--royal-gradient-1);
-            color: #fff !important;
-            padding: 10px 22px !important;
-            font-weight: 600;
-            box-shadow: 0 0 25px rgba(124, 58, 237, 0.3);
-            border-radius: 30px;
-        }
-        .navbar-nav .nav-link.btn-nav:hover {
-            box-shadow: 0 0 40px rgba(124, 58, 237, 0.55);
-            transform: translateY(-2px);
-        }
-        .navbar-toggler {
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 10px;
-            border-radius: 10px;
-        }
-        .navbar-toggler:focus {
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
-            outline: none;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+        .info-list i {
+            color: var(--secondary);
+            width: 20px;
         }
 
-        /* ============ HERO ============ */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: var(--royal-gradient-2);
-            overflow: hidden;
-            padding-top: 80px;
-        }
-        .hero-bg-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.4;
-            pointer-events: none;
-            animation: floatOrb 12s ease-in-out infinite;
-        }
-        .hero-bg-orb.orb-1 {
-            width: 500px;
-            height: 500px;
-            background: var(--royal-purple);
-            top: -15%;
-            right: -10%;
-            animation-delay: 0s;
-        }
-        .hero-bg-orb.orb-2 {
-            width: 400px;
-            height: 400px;
-            background: var(--royal-electric);
-            bottom: -20%;
-            left: -8%;
-            animation-delay: -5s;
-        }
-        .hero-bg-orb.orb-3 {
-            width: 300px;
-            height: 300px;
-            background: var(--royal-cyan);
-            top: 40%;
-            left: 35%;
-            animation-delay: -9s;
-            opacity: 0.25;
-        }
-        @keyframes floatOrb {
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-            25% {
-                transform: translate(40px, -30px) scale(1.08);
-            }
-            50% {
-                transform: translate(-20px, 25px) scale(0.94);
-            }
-            75% {
-                transform: translate(-35px, -15px) scale(1.05);
-            }
-        }
-        .hero-grid-lines {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        .hero-badge {
-            display: inline-block;
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--royal-cyan);
-            letter-spacing: 0.5px;
-            margin-bottom: 24px;
-            animation: fadeInUp 0.8s ease;
-        }
-        .hero-badge i {
-            margin-right: 6px;
-            color: var(--royal-gold);
-        }
-        .hero-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 800;
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
-            line-height: 1.1;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-            animation: fadeInUp 0.8s ease 0.1s both;
-        }
-        .hero-title .highlight {
-            background: var(--royal-gradient-3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 520px;
-            margin-bottom: 32px;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-        .hero-stats {
-            display: flex;
+        /* Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-        .hero-stat {
-            text-align: center;
-        }
-        .hero-stat .stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: #fff;
-            line-height: 1;
-        }
-        .hero-stat .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-        .hero-visual {
-            position: relative;
-            z-index: 2;
-            animation: fadeInRight 1s ease 0.3s both;
-        }
-        .hero-graphic-card {
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            border-radius: var(--radius-2xl);
-            padding: 30px 24px;
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-glow);
-            position: relative;
-        }
-        .speed-display {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 800;
-            font-size: 5rem;
-            line-height: 1;
-            background: var(--royal-gradient-3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-align: center;
-        }
-        .speed-unit {
-            font-size: 1.5rem;
-            -webkit-text-fill-color: var(--text-secondary);
-        }
-        .pulse-dot {
-            width: 12px;
-            height: 12px;
-            background: #22c55e;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-            box-shadow: 0 0 12px #22c55e;
-        }
-        @keyframes pulse {
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
-            }
-            50% {
-                box-shadow: 0 0 0 18px rgba(34, 197, 94, 0);
-            }
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .btn-hero {
-            background: var(--royal-gradient-1);
-            color: #fff;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 0.3px;
-            box-shadow: 0 0 35px rgba(124, 58, 237, 0.35);
-            transition: var(--transition-smooth);
-            animation: fadeInUp 0.8s ease 0.35s both;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-hero:hover {
-            box-shadow: 0 0 55px rgba(124, 58, 237, 0.55);
-            transform: translateY(-3px);
-            color: #fff;
-        }
-        .btn-hero-outline {
-            background: transparent;
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition-smooth);
-            animation: fadeInUp 0.8s ease 0.4s both;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-hero-outline:hover {
-            border-color: #fff;
-            background: rgba(255, 255, 255, 0.06);
-            color: #fff;
         }
 
-        /* ============ SECTION STYLES ============ */
-        .section-padding {
-            padding: 100px 0;
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-bottom: 4px solid transparent;
         }
-        .section-label {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--royal-cyan);
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--secondary);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
             margin-bottom: 12px;
         }
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: clamp(1.6rem, 3vw, 2.5rem);
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-            color: #fff;
-        }
-        .section-desc {
-            color: var(--text-secondary);
-            max-width: 600px;
-            font-size: 1.05rem;
+
+        /* Produtos (Planos) */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        /* ============ SERVIÇOS / DIFERENCIAIS ============ */
-        .feature-card {
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            border-radius: var(--radius-xl);
-            padding: 32px 24px;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-        }
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.08) 0%, transparent 60%);
-            pointer-events: none;
-            transition: var(--transition-smooth);
-        }
-        .feature-card:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-glow);
-        }
-        .feature-card:hover::before {
-            background: radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.18) 0%, transparent 60%);
-        }
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 18px;
-            position: relative;
-            z-index: 1;
-        }
-        .feature-icon.blue {
-            background: rgba(14, 165, 233, 0.2);
-            color: #38bdf8;
-        }
-        .feature-icon.purple {
-            background: rgba(124, 58, 237, 0.2);
-            color: #a78bfa;
-        }
-        .feature-icon.cyan {
-            background: rgba(0, 212, 255, 0.2);
-            color: #67e8f9;
-        }
-        .feature-icon.gold {
-            background: rgba(245, 158, 11, 0.2);
-            color: #fbbf24;
-        }
-        .feature-card h4 {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            position: relative;
-            z-index: 1;
-            color: #fff;
-        }
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 1;
-            margin: 0;
-        }
-
-        /* ============ SOBRE ============ */
-        .about-section {
-            background: var(--royal-navy);
-            position: relative;
-        }
-        .about-card {
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            border-radius: var(--radius-2xl);
-            padding: 40px;
-            backdrop-filter: blur(10px);
-        }
-        .info-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin: 4px;
-        }
-        .info-tag strong {
-            color: #fff;
-        }
-
-        /* ============ PLANOS ============ */
         .plan-card {
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            border-radius: var(--radius-2xl);
-            padding: 36px 28px;
-            transition: var(--transition-smooth);
-            position: relative;
-            height: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: var(--shadow);
             text-align: center;
+            transition: var(--transition);
+            position: relative;
         }
-        .plan-card.destaque {
-            border-color: var(--royal-purple);
-            box-shadow: var(--shadow-glow);
+
+        .plan-card.popular {
+            border: 2px solid var(--secondary);
             transform: scale(1.03);
-            background: rgba(124, 58, 237, 0.06);
         }
-        .plan-card:hover {
-            border-color: rgba(255, 255, 255, 0.25);
-            box-shadow: var(--shadow-card);
-            transform: translateY(-4px);
+
+        .plan-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
-        .plan-card.destaque:hover {
-            transform: scale(1.05);
-        }
-        .plan-badge {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--royal-gradient-1);
-            color: #fff;
-            padding: 6px 18px;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            white-space: nowrap;
-            box-shadow: 0 0 25px rgba(124, 58, 237, 0.5);
-        }
-        .plan-speed {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 800;
+
+        .price {
             font-size: 3rem;
-            color: #fff;
-            line-height: 1;
+            color: var(--accent);
+            margin: 15px 0;
         }
-        .plan-speed span {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-        }
-        .plan-price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--royal-cyan);
-        }
-        .plan-price small {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-        .plan-features {
+
+        .plan-card ul {
             list-style: none;
-            padding: 0;
-            text-align: left;
             margin: 20px 0;
         }
-        .plan-features li {
-            padding: 6px 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .plan-features li i {
-            color: #22c55e;
-            margin-right: 8px;
-        }
-        .btn-plan {
-            background: var(--royal-gradient-1);
-            color: #fff;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: 600;
-            width: 100%;
-            transition: var(--transition-smooth);
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-plan:hover {
-            box-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
-            color: #fff;
-        }
-        .btn-plan-outline {
-            background: transparent;
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: 600;
-            width: 100%;
-            transition: var(--transition-smooth);
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-plan-outline:hover {
-            border-color: #fff;
-            color: #fff;
+
+        .plan-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
 
-        /* ============ COBERTURA ============ */
-        .coverage-section {
-            background: var(--royal-deep);
-            position: relative;
+        .plan-card .btn {
+            margin-top: 20px;
         }
-        .coverage-map-placeholder {
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            border-radius: var(--radius-2xl);
-            padding: 50px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            position: relative;
+
+        /* Galeria */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
             overflow: hidden;
-        }
-        .coverage-map-placeholder .map-icon {
-            font-size: 6rem;
-            color: var(--royal-purple);
-            opacity: 0.7;
-            animation: floatOrb 8s ease-in-out infinite;
-        }
-        .city-badge {
-            display: inline-block;
-            background: rgba(14, 165, 233, 0.15);
-            border: 1px solid rgba(14, 165, 233, 0.3);
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            color: #38bdf8;
-            margin: 4px;
-            transition: var(--transition-smooth);
-        }
-        .city-badge:hover {
-            background: rgba(14, 165, 233, 0.25);
-            color: #fff;
+            position: relative;
+            height: 250px;
         }
 
-        /* ============ CONTATO ============ */
-        .contact-section {
-            background: var(--royal-navy);
-            position: relative;
-        }
-        .contact-card {
-            background: var(--royal-glass);
-            border: 1px solid var(--royal-glass-border);
-            border-radius: var(--radius-2xl);
-            padding: 32px;
-            backdrop-filter: blur(10px);
+        .gallery-item img {
+            width: 100%;
             height: 100%;
-            transition: var(--transition-smooth);
+            object-fit: cover;
+            transition: transform 0.5s;
         }
-        .contact-card:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: var(--shadow-card);
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
-        .contact-icon-circle {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+
+        /* Depoimentos */
+        .testimonials-slider {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
+        }
+
+        .testimonial-card {
+            min-width: 320px;
+            flex: 0 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            scroll-snap-align: start;
+        }
+
+        .testimonial-card .quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .client {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 14px;
-        }
-        .contact-icon-circle.blue {
-            background: rgba(14, 165, 233, 0.2);
-            color: #38bdf8;
-        }
-        .contact-icon-circle.purple {
-            background: rgba(124, 58, 237, 0.2);
-            color: #a78bfa;
-        }
-        .contact-icon-circle.green {
-            background: rgba(34, 197, 94, 0.2);
-            color: #4ade80;
+            gap: 12px;
         }
 
-        /* ============ FOOTER ============ */
-        .footer-section {
-            background: var(--royal-deep);
-            border-top: 1px solid var(--royal-glass-border);
-            padding: 50px 0 30px;
-        }
-        .footer-brand {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: #fff;
-        }
-        .footer-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            font-size: 0.9rem;
-        }
-        .footer-link:hover {
-            color: #fff;
-        }
-        .social-icon {
-            width: 38px;
-            height: 38px;
+        .client img {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            transition: var(--transition-smooth);
-            font-size: 1rem;
-            margin-right: 8px;
-            text-decoration: none;
-        }
-        .social-icon:hover {
-            background: var(--royal-purple);
-            color: #fff;
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+            object-fit: cover;
         }
 
-        /* ============ WHATSAPP FLOAT ============ */
+        .client h4 {
+            margin-bottom: 2px;
+        }
+
+        /* Contato */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: #f4f6f9;
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: 30px;
+        }
+
+        .contact-info i {
+            color: var(--secondary);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .contact-form button {
+            width: 100%;
+        }
+
+        /* WhatsApp flutuante */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            z-index: 999;
+            background: #25d366;
+            color: white;
             width: 60px;
             height: 60px;
-            background: #25d366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
-            color: #fff;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-            transition: var(--transition-smooth);
-            animation: pulseWhats 2.5s infinite;
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
-            color: #fff;
-        }
-        @keyframes pulseWhats {
-            0%,
-            100% {
-                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-            }
-            50% {
-                box-shadow: 0 8px 50px rgba(37, 211, 102, 0.7), 0 0 0 16px rgba(37, 211, 102, 0);
-            }
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+            z-index: 999;
+            transition: var(--transition);
         }
 
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 991px) {
-            .hero-section {
-                text-align: center;
-                min-height: auto;
-                padding: 120px 0 60px;
-            }
-            .hero-subtitle {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-stats {
-                justify-content: center;
-            }
-            .hero-visual {
-                margin-top: 40px;
-            }
-            .plan-card.destaque {
-                transform: scale(1);
-            }
-            .plan-card.destaque:hover {
-                transform: scale(1.02);
-            }
-            .navbar-collapse {
-                background: rgba(6, 11, 31, 0.95);
-                border-radius: 16px;
-                padding: 16px;
-                margin-top: 10px;
-                border: 1px solid var(--royal-glass-border);
-            }
-            .section-padding {
-                padding: 60px 0;
-            }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
         }
-        @media (max-width: 576px) {
-            .hero-stats {
-                gap: 16px;
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col a {
+            color: #aaa;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Animações scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
             }
-            .hero-stat .stat-number {
-                font-size: 1.3rem;
+
+            .hero-text h1 {
+                font-size: 2.2rem;
             }
-            .speed-display {
-                font-size: 3rem;
+
+            .about-grid {
+                grid-template-columns: 1fr;
             }
-            .about-card {
-                padding: 24px;
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                padding: 30px;
             }
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 1.4rem;
-                bottom: 20px;
-                right: 20px;
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                transition: left 0.4s;
+            }
+
+            nav ul.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ==================== NAVBAR ==================== -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <span class="brand-icon"><i class="bi bi-wifi"></i></span>
-                Royal Infinity
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="28" stroke="#00b4d8" stroke-width="3" fill="#0a192f"/>
+                    <path d="M20 30 L40 30 M30 20 L30 40" stroke="#00b4d8" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="20" cy="30" r="4" fill="#00b4d8"/>
+                    <circle cx="40" cy="30" r="4" fill="#00b4d8"/>
+                    <circle cx="30" cy="20" r="4" fill="#00b4d8"/>
+                    <circle cx="30" cy="40" r="4" fill="#00b4d8"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="gtex">GTEX</span>
+                    <span class="slogan">Fibra Óptica</span>
+                </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRoyal"
-            aria-controls="navbarRoyal" aria-expanded="false" aria-label="Menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarRoyal">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                <li class="nav-item ms-lg-2"><a class="nav-link btn-nav" href="#planos">Assinar Agora</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- ==================== HERO ==================== -->
-<section class="hero-section" id="home">
-    <div class="hero-bg-orb orb-1"></div>
-    <div class="hero-bg-orb orb-2"></div>
-    <div class="hero-bg-orb orb-3"></div>
-    <div class="hero-grid-lines"></div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 hero-content">
-                <div class="hero-badge">
-                    <i class="bi bi-lightning-charge-fill"></i> Fibra Óptica de Ponta
-                </div>
-                <h1 class="hero-title">
-                    Internet que <span class="highlight">redefine</span><br>sua conexão com o mundo
-                </h1>
-                <p class="hero-subtitle">
-                    Ultra velocidade, estabilidade incomparável e suporte que realmente entende você.
-                    A Royal Company Infinity traz o futuro da conectividade para sua casa ou empresa.
-                </p>
-                <div class="d-flex gap-3 flex-wrap mb-4">
-                    <a href="#planos" class="btn-hero"><i class="bi bi-rocket-takeoff-fill me-2"></i>Ver Planos</a>
-                    <a href="#contato" class="btn-hero-outline"><i class="bi bi-telephone-fill me-2"></i>Falar Agora</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="stat-number">+1 Gbps</div>
-                        <div class="stat-label">Velocidade Máxima</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="stat-number">99.9%</div>
-                        <div class="stat-label">Uptime Garantido</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="stat-number">24h</div>
-                        <div class="stat-label">Suporte Técnico</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 hero-visual">
-                <div class="hero-graphic-card text-center">
-                    <div class="speed-display">500 <span class="speed-unit">MEGA</span></div>
-                    <p class="text-secondary mb-2">Plano mais popular</p>
-                    <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
-                        <span class="pulse-dot"></span>
-                        <small class="text-success">Conexão estável agora</small>
-                    </div>
-                    <div class="d-flex justify-content-center gap-2 flex-wrap">
-                        <span class="info-tag"><i class="bi bi-check2-circle"></i> Fibra 100%</span>
-                        <span class="info-tag"><i class="bi bi-shield-check"></i> Sem franquia</span>
-                        <span class="info-tag"><i class="bi bi-router"></i> Wi-Fi 6</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== DIFERENCIAIS ==================== -->
-<section class="section-padding" id="diferenciais">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="section-label">Por que nos escolher</span>
-            <h2 class="section-title">Tecnologia que faz a diferença</h2>
-            <p class="section-desc mx-auto">Cada detalhe pensado para entregar a melhor experiência de navegação, streaming, jogos e trabalho remoto.</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon blue"><i class="bi bi-speedometer2"></i></div>
-                    <h4>Velocidade Real</h4>
-                    <p>Entrega de 100% da banda contratada com fibra óptica de ponta a ponta, sem oscilações.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon purple"><i class="bi bi-shield-lock-fill"></i></div>
-                    <h4>Segurança Total</h4>
-                    <p>Proteção contra ataques DDoS, firewall inteligente e monitoramento 24 horas da rede.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon cyan"><i class="bi bi-headset"></i></div>
-                    <h4>Suporte Premium</h4>
-                    <p>Equipe especializada pronta para atender via telefone, WhatsApp ou e-mail a qualquer hora.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-card">
-                    <div class="feature-icon gold"><i class="bi bi-infinity"></i></div>
-                    <h4>Sem Limites</h4>
-                    <p>Navegação ilimitada, sem franquia de dados. Baixe, faça streaming e jogue à vontade.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== SOBRE ==================== -->
-<section class="about-section section-padding" id="sobre">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <span class="section-label">Nossa História</span>
-                <h2 class="section-title">Conectando pessoas desde 2025</h2>
-                <p class="section-desc mb-3">
-                    A <strong>Royal Company Infinity LTDA</strong> nasceu em Osasco, São Paulo, com a missão de levar internet de qualidade para toda a região metropolitana.
-                </p>
-                <p class="text-secondary mb-3">
-                    Atuamos como <strong>Provedores de Acesso às Redes de Comunicações</strong> (CNAE 61.90-6-01), registrados na Receita Federal e em situação cadastral <span class="badge bg-success">Ativa</span>.
-                </p>
-                <div class="d-flex flex-wrap gap-2 mb-3">
-                    <span class="info-tag"><strong>CNPJ:</strong> 58.928.617/0001-51</span>
-                    <span class="info-tag"><strong>IE SP:</strong> 152.356.517.111</span>
-                    <span class="info-tag"><strong>Fundação:</strong> 16/01/2025</span>
-                </div>
-                <p class="text-muted small">
-                    <i class="bi bi-geo-alt-fill me-1"></i> Rua Antonio de Campos Toledo, 260 - Ayrosa - Osasco/SP - CEP 06283-000
-                </p>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-card">
-                    <h4 class="text-white mb-3"><i class="bi bi-building-check me-2"></i>Dados Corporativos</h4>
-                    <ul class="list-unstyled text-secondary mb-0" style="font-size:0.9rem;">
-                        <li class="mb-2"><strong class="text-white">Razão Social:</strong> Royal Company Infinity LTDA</li>
-                        <li class="mb-2"><strong class="text-white">CNPJ:</strong> 58.928.617/0001-51</li>
-                        <li class="mb-2"><strong class="text-white">Inscrição Estadual SP:</strong> 152.356.517.111</li>
-                        <li class="mb-2"><strong class="text-white">Abertura:</strong> 16 de Janeiro de 2025</li>
-                        <li class="mb-2"><strong class="text-white">Atividade Principal:</strong> 61.90-6-01 - Provedores de Acesso às Redes de Comunicações</li>
-                        <li class="mb-2"><strong class="text-white">Situação:</strong> <span class="text-success">Ativa</span></li>
-                        <li class="mb-2"><strong class="text-white">Endereço:</strong> Rua Antonio de Campos Toledo, 260 - Ayrosa - Osasco/SP</li>
-                        <li><strong class="text-white">CEP:</strong> 06283-000</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== PLANOS ==================== -->
-<section class="section-padding" id="planos" style="background: var(--royal-deep);">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="section-label">Nossos Planos</span>
-            <h2 class="section-title">Escolha o plano ideal para você</h2>
-            <p class="section-desc mx-auto">Conexão de fibra óptica com velocidade simétrica, ideal para residências e empresas.</p>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <!-- Plano 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="plan-card">
-                    <div class="plan-speed">300 <span>MEGA</span></div>
-                    <p class="text-secondary mb-2">Plano Essencial</p>
-                    <div class="plan-price">R$ 79<span>,90<small>/mês</small></span></div>
-                    <ul class="plan-features">
-                        <li><i class="bi bi-check-circle-fill"></i> Download 300 Mbps</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Upload 150 Mbps</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Wi-Fi 5 incluso</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Suporte 24h</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Sem franquia de dados</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Instalação grátis</li>
-                    </ul>
-                    <a href="https://wa.me/551156640400?text=Olá! Tenho interesse no plano de 300 MEGA" target="_blank" class="btn-plan-outline">Assinar Plano</a>
-                </div>
-            </div>
-            <!-- Plano 2 - Destaque -->
-            <div class="col-md-6 col-lg-4">
-                <div class="plan-card destaque">
-                    <div class="plan-badge">🌟 MAIS POPULAR</div>
-                    <div class="plan-speed mt-3">500 <span>MEGA</span></div>
-                    <p class="text-secondary mb-2">Plano Premium</p>
-                    <div class="plan-price">R$ 99<span>,90<small>/mês</small></span></div>
-                    <ul class="plan-features">
-                        <li><i class="bi bi-check-circle-fill"></i> Download 500 Mbps</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Upload 250 Mbps</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Wi-Fi 6 incluso</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Suporte 24h prioritário</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Sem franquia de dados</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Instalação grátis</li>
-                        <li><i class="bi bi-check-circle-fill"></i> IP Fixo opcional</li>
-                    </ul>
-                    <a href="https://wa.me/551156640400?text=Olá! Tenho interesse no plano de 500 MEGA" target="_blank" class="btn-plan">Assinar Plano</a>
-                </div>
-            </div>
-            <!-- Plano 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="plan-card">
-                    <div class="plan-speed">1 <span>GIGA</span></div>
-                    <p class="text-secondary mb-2">Plano Ultra</p>
-                    <div class="plan-price">R$ 149<span>,90<small>/mês</small></span></div>
-                    <ul class="plan-features">
-                        <li><i class="bi bi-check-circle-fill"></i> Download 1 Gbps</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Upload 500 Mbps</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Wi-Fi 6E incluso</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Suporte VIP 24h</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Sem franquia de dados</li>
-                        <li><i class="bi bi-check-circle-fill"></i> Instalação grátis</li>
-                        <li><i class="bi bi-check-circle-fill"></i> IP Fixo + Domínio</li>
-                    </ul>
-                    <a href="https://wa.me/551156640400?text=Olá! Tenho interesse no plano de 1 GIGA" target="_blank" class="btn-plan-outline">Assinar Plano</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== COBERTURA ==================== -->
-<section class="coverage-section section-padding" id="cobertura">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-5">
-                <span class="section-label">Área de Cobertura</span>
-                <h2 class="section-title">Presentes em Osasco e região</h2>
-                <p class="section-desc">
-                    Atendemos toda a cidade de <strong>Osasco/SP</strong> e bairros adjacentes da região metropolitana de São Paulo. Confira se sua rua está na nossa área de cobertura.
-                </p>
-                <div class="d-flex flex-wrap gap-2 mt-3">
-                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Osasco</span>
-                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Ayrosa</span>
-                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Região Metropolitana SP</span>
-                    <span class="city-badge"><i class="bi bi-pin-map-fill me-1"></i> Em expansão</span>
-                </div>
-                <a href="https://wa.me/551156640400?text=Olá! Gostaria de verificar cobertura para meu endereço" target="_blank" class="btn-hero mt-4 d-inline-block">
-                    <i class="bi bi-whatsapp me-2"></i>Verificar Cobertura
-                </a>
-            </div>
-            <div class="col-lg-7">
-                <div class="coverage-map-placeholder">
-                    <div class="map-icon mb-3"><i class="bi bi-geo-alt-fill"></i></div>
-                    <h4 class="text-white">Cobertura em Expansão</h4>
-                    <p class="text-secondary">Estamos ampliando nossa rede de fibra óptica constantemente.<br>Consulte-nos para saber se já atendemos seu endereço!</p>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap mt-3">
-                        <span class="info-tag"><i class="bi bi-check-circle-fill text-success"></i> Ayrosa</span>
-                        <span class="info-tag"><i class="bi bi-check-circle-fill text-success"></i> Centro - Osasco</span>
-                        <span class="info-tag"><i class="bi bi-check-circle-fill text-success"></i> Zona Oeste SP</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== CONTATO ==================== -->
-<section class="contact-section section-padding" id="contato">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="section-label">Fale Conosco</span>
-            <h2 class="section-title">Estamos prontos para te atender</h2>
-            <p class="section-desc mx-auto">Canais de atendimento disponíveis para você tirar dúvidas, solicitar instalação ou suporte técnico.</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="contact-card text-center">
-                    <div class="contact-icon-circle blue mx-auto"><i class="bi bi-whatsapp"></i></div>
-                    <h5 class="text-white">WhatsApp</h5>
-                    <p class="text-secondary small">Resposta rápida e atendimento humanizado</p>
-                    <a href="https://wa.me/551156640400" target="_blank" class="btn btn-sm btn-outline-light rounded-pill px-4 mt-2">
-                        (11) 5664-0400 <i class="bi bi-arrow-up-right ms-1"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-card text-center">
-                    <div class="contact-icon-circle purple mx-auto"><i class="bi bi-telephone-fill"></i></div>
-                    <h5 class="text-white">Telefone</h5>
-                    <p class="text-secondary small">Ligação direta para nossa central</p>
-                    <a href="tel:+551156640400" class="btn btn-sm btn-outline-light rounded-pill px-4 mt-2">
-                        (11) 5664-0400 <i class="bi bi-arrow-up-right ms-1"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-card text-center">
-                    <div class="contact-icon-circle green mx-auto"><i class="bi bi-envelope-fill"></i></div>
-                    <h5 class="text-white">E-mail</h5>
-                    <p class="text-secondary small">Envie sua mensagem a qualquer hora</p>
-                    <a href="mailto:admroyalcompany@gmail.com" class="btn btn-sm btn-outline-light rounded-pill px-4 mt-2">
-                        admroyalcompany@gmail.com <i class="bi bi-arrow-up-right ms-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Endereço completo -->
-        <div class="text-center mt-5">
-            <div class="d-inline-block text-secondary" style="background: var(--royal-glass); border: 1px solid var(--royal-glass-border); border-radius: var(--radius-xl); padding: 20px 28px;">
-                <i class="bi bi-geo-alt-fill me-1" style="color: var(--royal-purple);"></i>
-                <strong class="text-white">Royal Company Infinity LTDA</strong><br>
-                Rua Antonio de Campos Toledo, 260 - Ayrosa - Osasco/SP - CEP 06283-000
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer-section">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 mb-3">
-                <div class="footer-brand mb-2">
-                    <i class="bi bi-wifi me-2" style="color: var(--royal-cyan);"></i>Royal Infinity
-                </div>
-                <p class="text-muted small">Provedor de acesso às redes de comunicações.<br>Conectando você ao futuro desde 2025.</p>
-                <div class="d-flex mt-3">
-                    <a href="https://wa.me/551156640400" target="_blank" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                    <a href="mailto:admroyalcompany@gmail.com" class="social-icon" title="E-mail"><i class="bi bi-envelope-fill"></i></a>
-                    <a href="tel:+551156640400" class="social-icon" title="Telefone"><i class="bi bi-telephone-fill"></i></a>
-                    <a href="#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <h6 class="text-white mb-3">Links Rápidos</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#home" class="footer-link">Início</a></li>
-                    <li><a href="#diferenciais" class="footer-link">Diferenciais</a></li>
-                    <li><a href="#sobre" class="footer-link">Sobre Nós</a></li>
-                    <li><a href="#planos" class="footer-link">Planos</a></li>
-                    <li><a href="#cobertura" class="footer-link">Cobertura</a></li>
-                    <li><a href="#contato" class="footer-link">Contato</a></li>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero / Home -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-text fade-in">
+                <h1>Conectividade <span>Fibra Óptica</span> de alta performance</h1>
+                <p>Internet ultra rápida para sua casa ou empresa em São Luís. Tecnologia de ponta e suporte especializado.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#planos" class="btn btn-primary">Ver planos</a>
+                    <a href="https://wa.me/5598984182490?text=Olá%2C%20gostaria%20de%20mais%20informações" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
             </div>
-            <div class="col-lg-4 mb-3">
-                <h6 class="text-white mb-3">Informações Legais</h6>
-                <p class="text-muted small mb-1"><strong>CNPJ:</strong> 58.928.617/0001-51</p>
-                <p class="text-muted small mb-1"><strong>IE SP:</strong> 152.356.517.111</p>
-                <p class="text-muted small mb-1"><strong>CNAE:</strong> 61.90-6-01</p>
-                <p class="text-muted small mb-0"><strong>Situação:</strong> Ativa</p>
+            <div class="hero-image fade-in">
+                <!-- Ilustração vetorial -->
+                <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="150" y="100" width="200" height="200" rx="20" fill="none" stroke="#00b4d8" stroke-width="8" stroke-dasharray="10 10"/>
+                    <circle cx="250" cy="200" r="40" fill="#00b4d8" opacity="0.2"/>
+                    <circle cx="250" cy="200" r="20" fill="#00b4d8"/>
+                    <path d="M100 150 Q 150 80 200 150 T 300 150" stroke="#00b4d8" stroke-width="4" fill="none"/>
+                    <path d="M100 250 Q 150 320 200 250 T 300 250" stroke="#00b4d8" stroke-width="4" fill="none"/>
+                    <text x="210" y="350" font-size="20" fill="#00b4d8" font-weight="bold">FIBER</text>
+                </svg>
             </div>
         </div>
-        <hr style="border-color: rgba(255,255,255,0.08);">
-        <div class="text-center text-muted small">
-            &copy; 2025-2026 Royal Company Infinity LTDA. Todos os direitos reservados. | Osasco/SP
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Sobre a Gtex</h2>
+                <p>Conheça nossa história e compromisso com a qualidade</p>
+            </div>
+            <div class="about-grid fade-in">
+                <div class="about-image">
+                    <svg viewBox="0 0 400 300" fill="none">
+                        <rect x="50" y="50" width="300" height="200" rx="15" fill="rgba(255,255,255,0.15)"/>
+                        <circle cx="120" cy="130" r="20" fill="white" opacity="0.8"/>
+                        <circle cx="200" cy="130" r="20" fill="white" opacity="0.8"/>
+                        <circle cx="280" cy="130" r="20" fill="white" opacity="0.8"/>
+                        <path d="M120 130 L200 130 L280 130" stroke="white" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="about-content">
+                    <h3>Provedor de acesso com foco em inovação</h3>
+                    <p><strong>Gtex Fibra Óptica LTDA</strong> – CNPJ: 60.911.564/0001-08</p>
+                    <p>Fundada em 20 de maio de 2025, em São Luís - MA, nossa atividade principal é o provimento de acesso às redes de comunicações (CNAE 61.90-6-01). Estamos em situação cadastral ativa, oferecendo soluções modernas de conectividade.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Mal. Castelo Branco, Edf. Com. C. Branco, 148 – Sala 207, Ilhinha – São Luís/MA</li>
+                        <li><i class="fas fa-envelope"></i> gtexfibraoptica@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (98) 98418-2490</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<!-- ==================== WHATSAPP FLOAT ==================== -->
-<a href="https://wa.me/551156640400?text=Olá! Gostaria de mais informações sobre os planos de internet." target="_blank" class="whatsapp-float" title="Fale conosco pelo WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-</a>
+    <!-- Serviços -->
+    <section id="servicos" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas em fibra óptica</p>
+            </div>
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Internet Fibra</h3>
+                    <p>Conexão estável e ultrarrápida para residências e empresas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Link Dedicado</h3>
+                    <p>Banda garantida e IP fixo para negócios que não podem parar.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Instalação de Rede</h3>
+                    <p>Projetos e cabeamento estruturado em fibra óptica.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Suporte Técnico</h3>
+                    <p>Equipe especializada para manutenção e suporte 24h.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+    <!-- Produtos / Planos -->
+    <section id="planos">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Nossos Planos</h2>
+                <p>Escolha a velocidade ideal para você</p>
+            </div>
+            <div class="plans-grid fade-in">
+                <div class="plan-card">
+                    <h3>Básico</h3>
+                    <div class="price">100<span style="font-size:1rem">Mbps</span></div>
+                    <ul>
+                        <li>Download 100 Mbps</li>
+                        <li>Upload 50 Mbps</li>
+                        <li>Wi-Fi grátis</li>
+                        <li>Suporte técnico</li>
+                    </ul>
+                    <a href="https://wa.me/5598984182490?text=Quero%20assinar%20o%20plano%20Básico" target="_blank" class="btn btn-primary">Assinar</a>
+                </div>
+                <div class="plan-card popular">
+                    <h3>Premium</h3>
+                    <div class="price">300<span style="font-size:1rem">Mbps</span></div>
+                    <ul>
+                        <li>Download 300 Mbps</li>
+                        <li>Upload 150 Mbps</li>
+                        <li>Wi-Fi 6</li>
+                        <li>IP fixo opcional</li>
+                    </ul>
+                    <a href="https://wa.me/5598984182490?text=Quero%20assinar%20o%20plano%20Premium" target="_blank" class="btn btn-primary">Assinar</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Ultra</h3>
+                    <div class="price">1<span style="font-size:1rem">Gbps</span></div>
+                    <ul>
+                        <li>Download 1 Gbps</li>
+                        <li>Upload 500 Mbps</li>
+                        <li>Roteador top</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="https://wa.me/5598984182490?text=Quero%20assinar%20o%20plano%20Ultra" target="_blank" class="btn btn-primary">Assinar</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-    // Navbar scroll effect
-    const navbar = document.getElementById('mainNavbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    <!-- Galeria -->
+    <section id="galeria" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Galeria de Instalações</h2>
+                <p>Conheça nossos projetos</p>
+            </div>
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=1" alt="Instalação fibra"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=2" alt="Rede óptica"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=3" alt="Equipamentos"></div>
+                <div class="gallery-item"><img src="https://picsum.photos/400/300?random=4" alt="Suporte técnico"></div>
+            </div>
+        </div>
+    </section>
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                const navbarHeight = navbar.offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset -
-                    navbarHeight - 10;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                const navCollapse = document.getElementById('navbarRoyal');
-                if (navCollapse.classList.contains('show')) {
-                    navCollapse.classList.remove('show');
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Depoimentos</h2>
+                <p>O que nossos clientes dizem</p>
+            </div>
+            <div class="testimonials-slider fade-in">
+                <div class="testimonial-card">
+                    <p class="quote">"Internet muito estável, recomendo! Instalação rápida e equipe educada."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+                        <div>
+                            <h4>Maria Silva</h4>
+                            <small>Cliente residencial</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"O link dedicado resolveu nossos problemas de latência. Parceria de confiança."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                        <div>
+                            <h4>João Empresário</h4>
+                            <small>Empresa de TI</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Melhor custo-benefício de São Luís. Suporte sempre atencioso."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente">
+                        <div>
+                            <h4>Ana Costa</h4>
+                            <small>Comerciante</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Fale Conosco</h2>
+                <p>Entre em contato para contratar ou tirar dúvidas</p>
+            </div>
+            <div class="contact-wrapper fade-in">
+                <div class="contact-info">
+                    <h3>Informações</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Mal Castelo Branco, Edf. Com. C. Branco, 148 - Sala 207<br>Ilhinha, São Luís - MA, 65076-670</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+5598984182490">(98) 98418-2490</a></p>
+                    <p><i class="fas fa-envelope"></i> gtexfibraoptica@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15956.290198419271!2d-44.3173496!3d-2.533173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMzEnNTkuNCJTIDQ0wrAxOScwMi40Ilc!5e0!3m2!1spt-BR!2sbr!4v1620000000000" width="100%" height="200" style="border:0; border-radius:10px; margin-top:15px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
+                    <input type="tel" id="phone" placeholder="Telefone">
+                    <textarea id="message" rows="4" placeholder="Mensagem" required></textarea>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Gtex Fibra Óptica</h4>
+                    <p>Provedor de acesso em São Luís, MA. Tecnologia e confiabilidade.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links rápidos</h4>
+                    <a href="#home">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#planos">Planos</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p>(98) 98418-2490</p>
+                    <p>gtexfibraoptica@gmail.com</p>
+                    <p>Ilhinha, São Luís - MA</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Gtex Fibra Óptica LTDA – CNPJ: 60.911.564/0001-08. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/5598984182490?text=Olá%2C%20visitei%20o%20site%20e%20gostaria%20de%20mais%20informações" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em link
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Animação de scroll (fade-in)
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
                 }
-            }
-        });
-    });
+            });
+        }, { threshold: 0.1 });
 
-    // Update active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.btn-nav)');
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute('id');
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Formulário funcional (mailto)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (!name || !email || !message) {
+                alert('Preencha os campos obrigatórios!');
+                return;
             }
+            const mailtoLink = `mailto:gtexfibraoptica@gmail.com?subject=Contato via site - ${name}&body=Nome: ${name}%0D%0AEmail: ${email}%0D%0ATelefone: ${phone}%0D%0AMensagem: ${message}`;
+            window.location.href = mailtoLink;
+            alert('Abrindo seu cliente de e-mail. Se não abrir, envie para gtexfibraoptica@gmail.com');
+            this.reset();
         });
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    });
-</script>
+    </script>
 </body>
 </html>
